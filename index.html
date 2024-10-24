@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My♥ message</title>
+    <title>My message</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,8 +12,23 @@
     </header>
 
     <main>
-        <section class="content">
-            <h2>hello Lolla</h2>
+        <div id="login-container" class="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-error" style="color: red;"></p>
+            <p class="loading" id="loading">جاري تسجيل الدخول...</p>
+        </div>
+
+        <section id="content" class="content hidden">
+            <h2>hello Lola</h2>
             <p>On this special day, I want to express my love for you. You mean everything to me, and I cherish every moment we spend together.</p>
             <p>This little website is just a token of my affection for you. I hope it brings a smile to your face.</p>
             <div class="image-container">
@@ -26,22 +41,25 @@
                 Your browser does not support the audio element.
             </audio>
 
-           
-
-            <div class="image-container">
-                <img src="04.jpg" alt="New Image" style="width: 100%; height: auto; border-radius: 8px;"> <!-- الصورة الجديدة -->
-            </div>
             <audio controls>
                 <source src="03.mp3" type="audio/mpeg"> <!-- الأغنية الجديدة -->
                 <source src="03.ogg" type="audio/ogg">
                 Your browser does not support the audio element.
             </audio>
 
+            <div class="image-container">
+                <img src="04.jpg" alt="New Image" style="width: 100%; height: auto; border-radius: 8px;"> <!-- الصورة الجديدة -->
+            </div>
         </section>
     </main>
 
     <footer>
         <p>© 2024 M.Desuky</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const loginError = document.getElementById('login-error');
+        const loading = document.getElementById('loading');
+        const loginContainer = document.getElementById('login-container');
+        
