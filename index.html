@@ -41,17 +41,17 @@
                 Your browser does not support the audio element.
             </audio>
 
-       
+           
 
             <div class="image-container">
                 <img src="04.jpg" alt="New Image" style="width: 100%; height: auto; border-radius: 8px;"> <!-- الصورة الجديدة -->
             </div>
-     <audio controls>
+
+            <audio controls>
                 <source src="03.mp3" type="audio/mpeg"> <!-- الأغنية الجديدة -->
                 <source src="03.ogg" type="audio/ogg">
                 Your browser does not support the audio element.
-            </audio>
-            
+            </audio>  
         </section>
     </main>
 
@@ -64,4 +64,27 @@
         const loginError = document.getElementById('login-error');
         const loading = document.getElementById('loading');
         const loginContainer = document.getElementById('login-container');
-        
+        const content = document.getElementById('content');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            loading.style.display = 'block'; // إظهار علامة التحميل
+
+            setTimeout(() => {
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // تحقق من اسم المستخدم وكلمة المرور
+                if (username === 'lolla' && password === '2025') {
+                    loginContainer.classList.add('hidden'); // إخفاء قسم تسجيل الدخول
+                    content.classList.remove('hidden'); // إظهار المحتوى
+                } else {
+                    loading.style.display = 'none'; // إخفاء علامة التحميل
+                    loginError.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة!';
+                    content.classList.add('hidden'); // إخفاء المحتوى إذا كانت البيانات غير صحيحة
+                }
+            }, 2000); // وقت التحميل 2 ثانية
+        });
+    </script>
+</body>
+</html>
