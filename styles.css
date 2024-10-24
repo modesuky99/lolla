@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* خلفية داكنة */
+    color: white; /* نص أبيض */
+}
+
+header, footer {
+    text-align: center;
+    background-color: #1E1E1E; /* لون خلفية داكن */
+    color: #FFD700; /* نص بلون ذهبي */
+    padding: 1em 0;
+}
+
+.content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1E1E1E; /* لون خلفية داكن */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* ظل ذهبي */
+    animation: fadeIn 1s;
+    text-align: center; /* محاذاة النص إلى المركز */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.login-container {
+    max-width: 400px;
+    padding: 20px;
+    background: #1E1E1E; /* لون خلفية داكن */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* ظل ذهبي */
+    animation: slideIn 0.5s;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.loading {
+    display: none;
+    margin-top: 10px;
+    color: #FFD700; /* لون ذهبي */
+}
+
+button {
+    background-color: #FFD700; /* لون زر ذهبي */
+    color: #121212; /* لون نص داكن */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* تأثير الانتقال */
+}
+
+button:hover {
+    background-color: #FFC300; /* لون زر عند المرور */
+    transform: scale(1.05); /* تكبير الزر عند المرور */
+}
