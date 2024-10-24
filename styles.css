@@ -64,3 +64,7 @@ button:hover {
     background-color: #FFC300; /* لون زر عند المرور */
     transform: scale(1.05); /* تكبير الزر عند المرور */
 }
+
+.hidden {
+    display: none; /* لإخفاء العناصر */
+}
